@@ -4,6 +4,6 @@
 
 The engine that manages node connections and load distribution
 
-## HIVE
+## HIVIL
 
-The engine that manages node connections and load distribution
+The scripting language and interpreter that drives the HIVE engine

@@ -1,5 +1,9 @@
 # Glossary
 
+## Application Root
+
+The place where your HIVE installation resides.
+
 ## Comment
 
 A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
@@ -36,6 +40,6 @@ A node that only carries out script instructions, referring to the master node f
 
 An attribute that is added to a key of some kind.
 
-## Application Root
+## Race condition
 
-The place where your HIVE installation resides.
+When two parallel tasks 'race' to affect the outcome of a process. Can lead to confusing and fatal errors if not accounted for in program coding. In a HIVE environment, race conditions are usually caused by network issues.

@@ -1,5 +1,9 @@
 # Glossary
 
+## Comment
+
+A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
+
 ## HIVE
 
 The engine that manages node connections and load distribution
@@ -32,6 +36,6 @@ A node that only carries out script instructions, referring to the master node f
 
 An attribute that is added to a key of some kind.
 
-## Comment
+## Application Root
 
-A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
+The place where your HIVE installation resides.

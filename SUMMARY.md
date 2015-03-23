@@ -6,4 +6,5 @@
    * 1.1 What is HIVE?
    * 1.2 Setting up your testing enviroment
    * 1.3 Installing the HIVE enviroment
+   * 1.4 Setting up HIVE
 

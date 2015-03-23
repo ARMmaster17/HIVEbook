@@ -40,6 +40,10 @@ The node on which the source script and the variable store resides.
 
 Any computer that has HIVE installed.
 
+## Ping
+
+The time in milliseconds it takes for a packet to travel across the network.
+
 ## Race condition
 
 When two parallel tasks 'race' to affect the outcome of a process. Can lead to confusing and fatal errors if not accounted for in program coding. In a HIVE environment, race conditions are usually caused by network issues.
@@ -60,6 +64,6 @@ An attribute that is added to a key of some kind.
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
 
-## Ping
+## Elevated Slave
 
-The time in milliseconds it takes for a packet to travel across the network.
+A node that acts like a slave, but is allowed to interface with the user using commands like PRINT.

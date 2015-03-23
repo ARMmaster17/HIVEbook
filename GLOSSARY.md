@@ -40,6 +40,10 @@ Any computer that has HIVE installed.
 
 When two parallel tasks 'race' to affect the outcome of a process. Can lead to confusing and fatal errors if not accounted for in program coding. In a HIVE environment, race conditions are usually caused by network issues.
 
+## SWAP space
+
+A file on a hard drive that acts like an extension of RAM. Can be useful in many applications, but it can be detrimental in high-speed applications.
+
 ## Slave node
 
 A node that only carries out script instructions, referring to the master node for variables and external scripts.
@@ -48,6 +52,6 @@ A node that only carries out script instructions, referring to the master node f
 
 An attribute that is added to a key of some kind.
 
-## SWAP space
+## Virtualization
 
-A file on a hard drive that acts like an extension of RAM. Can be useful in many applications, but it can be detrimental in high-speed applications.
+A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.

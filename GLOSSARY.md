@@ -8,6 +8,10 @@ The place where your HIVE installation resides.
 
 A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
 
+## Enterprise networking
+
+A specific type of network that is built to support hundreds or even thousands of users at one with minimum down-time. Often requires higher-end hardware than can be found on the consumer market.
+
 ## HIVE
 
 The engine that manages node connections and load distribution
@@ -44,6 +48,6 @@ A node that only carries out script instructions, referring to the master node f
 
 An attribute that is added to a key of some kind.
 
-## Enterprise networking
+## SWAP space
 
-A specific type of network that is built to support hundreds or even thousands of users at one with minimum down-time. Often requires higher-end hardware than can be found on the consumer market.
+A file on a hard drive that acts like an extension of RAM. Can be useful in many applications, but it can be detrimental in high-speed applications.

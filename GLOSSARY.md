@@ -55,3 +55,7 @@ An attribute that is added to a key of some kind.
 ## Virtualization
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
+
+## Latency
+
+The higher latency you have, the longer it takes a packet to travel across the network to its specified destination.

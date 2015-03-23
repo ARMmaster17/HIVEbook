@@ -27,3 +27,5 @@ If you wish to have nodes that operate as both slaves and nodes, it is recommend
 
 ### 1.2.5 Network layout
 If you think you can get by with Wi-Fi, all I can say is good luck. For a solid network, you will need an all-ethernet network. All nodes should be on the same subnet. VPN across datacenters is possible, but can lead to unpredictable results from network ping. If you are part of an enterprise environment, a dedicated router or a switch will suffice to prevent a DDoS-style knockout of your enterprise network. A firewall is neccesary if your network directly interfaces with other computers over the Internet.
+
+## 1.3 Setting up the HIVE enviroment

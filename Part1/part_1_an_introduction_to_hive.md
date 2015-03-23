@@ -26,9 +26,9 @@ This machine will have to be very powerful. The actual requirements will depend 
 If you wish to have nodes that operate as both slaves and nodes, it is recommended that you follow the same guidelines as in 1.2.3. The only exception would be dual ethernet. This is not recommended unless you have a good reason to. For optimum results, all nodes should have the same hardware layout.
 
 ### 1.2.5 Network layout
-If you think you can get by with Wi-Fi, all I can say is good luck. For a solid network, you will need an all-ethernet network. All nodes should be on the same subnet. VPN across datacenters is possible, but can lead to unpredictable results from network ping. If you are part of an enterprise environment, a dedicated router or a switch will suffice to prevent a DDoS-style knockout of your enterprise network. A firewall is neccesary if your network directly interfaces with other computers over the Internet.
+If you think you can get by with Wi-Fi, all I can say is good luck. For a solid network, you will need an all-ethernet network. All nodes should be on the same subnet. VPN across data centers is possible, but can lead to unpredictable results from network ping (race conditions, discussed in part 3). If you are part of an enterprise environment, a dedicated router or a switch will suffice to prevent a DDoS-style knockout of your enterprise network. A firewall is neccesary if your network directly interfaces with other computers over the Internet.
 
-## 1.3 Installing the HIVE enviroment
+## 1.3 Installing the HIVE environment
 At this point, you should have at least two eliglbe nodes on a wired network of some kind. For each node, you will need to install the HIVE engine service, for this you have a few options.
 
 ### 1.3.1 Download files
@@ -64,3 +64,16 @@ To declare a line a comment, start your line like this:
     //
     
 After this line, you may put any text you wish. Do note that within config files, HIVE does not support adding comments on the same line as code. This will either cause an error or some **really** interesting results.
+
+#### 1.4.1.2 Keys and values
+In a HIVE config file, The text on the left side of the *=* sign is the name of the setting you are modifying/setting. This is known as the **key**. Keys are always in all caps. Anything to the right of the *=* sign is the **value** you are assigning to the key. Table 1.4.1.2A shows a list of all supported keys and suggested values.
+
+*Figure 1.4.1.2-A*
+
+| Key | Value type |Values supported |
+| -- | -- | -- |
+| UNITID | String | A name to identify the unit in the HIVE. Must be unique from all nodes on the network. |
+| INTER | Integer | Number of network interface to use. Put -1 to pick the first non-loopback interface. |
+| LANG | String(locale) | Name of the locale used in your country. When in doubt, pick 'en-ALL'. |
+| MODFOLDER | String(filepath) | Path to the folder containing extension modules. |
+| FS | String(filepath) | Path to a folder where you would like the File Store folder created. Put on an SSD if possible. |

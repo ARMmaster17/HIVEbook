@@ -6,7 +6,12 @@ Yet, these sub-systems of HIVE can be somewhat complex. Networking protocols and
 
 At its core level, HIVE is a system that runs commands in a script file while distributing the work across multiple computer nodes. From this statement, HIVE can be broken down into two parts: the HIVE engine and the HIVIL scripting component.
 
-### 1.2 HIVE Engine
+### 1.1.2 HIVE Engine
 Keeping the analogy of an automobile as a system, the massive network of wires, tubes, and pipes is what the HIVE engine consists of. The HIVE engine is responsibe for moving everything from place to place in a seamless manner. It also consists of the electrical system, which is responsible for notifying the user when there in a malfunction, and safely brings the vehicle to a stop (hopefully).
 
-### 1.3 HIVIL Scripting
+### 1.1.3 HIVIL Scripting
+If the HIVE engine is the transport network of an automobile, then HIVIL script is anything that goes through that network. HIVIL scripting is the code you feed into the HIVE engine. The HIVE engine will manage breaking up your program across multiple nodes, so you can just focus on the actual program logic. Like how a car is useless without a fuel supply, the HIVE engine is useless without a HIVIL program to process. But HIVIL doesn't just consist of the contents of the transport network, it also composes of the actual devices at the ends of the strands of the network. HIVIL also includes the interpreter, which is responsible for translating the script commands into native machine code. It also carries out variable manipulations across the network to keep the entire system in sync. It will also temporarily pause the program if a required function is not completed yet.
+
+## 1.2 Setting up your testing enviroment
+### 1.2.1 Development machine
+The most simple development enviroment you can use is any computer with a text editor such as notepad. Yep, that's it. If you would like to get a little more advanced, you may want to look at Notepad++ (http://www.notepad-plus-plus.org) or the official HIVE IDE. At the time of this writing, it is in an unstable state and is not recommended for regular use.

@@ -28,6 +28,10 @@ Source code that is converted into machine code in real-time. HIVIL is an exampl
 
 The name of a setting. Can also be the unique ID for each entry in a database.
 
+## Latency
+
+The higher latency you have, the longer it takes a packet to travel across the network to its specified destination.
+
 ## Master node
 
 The node on which the source script and the variable store resides.
@@ -56,6 +60,6 @@ An attribute that is added to a key of some kind.
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
 
-## Latency
+## Ping
 
-The higher latency you have, the longer it takes a packet to travel across the network to its specified destination.
+The time in milliseconds it takes for a packet to travel across the network.

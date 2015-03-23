@@ -12,10 +12,14 @@ The scripting language and interpreter that drives the HIVE engine
 
 The node on which the source script and the variable store resides.
 
+## Node
+
+Any computer that has HIVE installed.
+
 ## Slave node
 
 A node that only carries out script instructions, referring to the master node for variables and external scripts.
 
-## Node
+## Interpreted
 
-Any computer that has HIVE installed.
+Source code that is converted into machine code in real-time. HIVIL is an example of an interpreted language.

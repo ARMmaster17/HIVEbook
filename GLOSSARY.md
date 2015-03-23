@@ -32,6 +32,10 @@ The node on which the source script and the variable store resides.
 
 Any computer that has HIVE installed.
 
+## Race condition
+
+When two parallel tasks 'race' to affect the outcome of a process. Can lead to confusing and fatal errors if not accounted for in program coding. In a HIVE environment, race conditions are usually caused by network issues.
+
 ## Slave node
 
 A node that only carries out script instructions, referring to the master node for variables and external scripts.
@@ -40,6 +44,6 @@ A node that only carries out script instructions, referring to the master node f
 
 An attribute that is added to a key of some kind.
 
-## Race condition
+## Enterprise networking
 
-When two parallel tasks 'race' to affect the outcome of a process. Can lead to confusing and fatal errors if not accounted for in program coding. In a HIVE environment, race conditions are usually caused by network issues.
+A specific type of network that is built to support hundreds or even thousands of users at one with minimum down-time. Often requires higher-end hardware than can be found on the consumer market.

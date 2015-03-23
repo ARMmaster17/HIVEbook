@@ -9,4 +9,5 @@
    * 1.4 Setting up HIVE
 * Part 2: A detailed look at the HIVE engine
    * 2.1 Introduction
+   * 2.2 Cycle of a HIVE program
 

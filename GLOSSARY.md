@@ -31,3 +31,7 @@ A node that only carries out script instructions, referring to the master node f
 ## Value
 
 An attribute that is added to a key of some kind.
+
+## Comment
+
+A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.

@@ -1,5 +1,5 @@
 # Glossary
 
-## HIVIL
+## HIVE
 
-The scripting language and interpreter that drive the HIVE engine
+The engine that manages node connections and load distribution

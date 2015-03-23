@@ -76,7 +76,7 @@ No program is perfect. Even if you could create a perfect program, there will al
 
 ### 2.3.1 Killswitch
 
-If you remember from 2.2.5, I said that HIVE uses ports 9000 and 9002-9100. What about 9001? Port 9001 is a UDP port that is constantly listening for messages from any node. If any node hits a fatal error, slave or master, it will broadcast over UDP port 9001 the name of the current program. All nodes that are running that program will terminate immediately and free their resources. This 'killswitch' can also be triggered manually by the user through the HIVE console window.
+If you remember from 2.2.5, HIVE uses ports 9000 and 9002-9100. What about 9001? Port 9001 is a UDP port that is constantly listening for messages from any node. If any node hits a fatal error, slave or master, it will broadcast over UDP port 9001 the name of the current program. All nodes that are running that program will terminate immediately and free their resources. This 'killswitch' can also be triggered manually by the user through the HIVE console window.
 
 ### 2.3.2 Warnings
 

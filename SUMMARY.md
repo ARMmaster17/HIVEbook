@@ -11,4 +11,5 @@
    * 2.1 Introduction
    * 2.2 Cycle of a HIVE program
    * 2.3 Error catching
+* Part 3: Coding in for HIVE
 

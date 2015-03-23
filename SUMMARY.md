@@ -7,4 +7,5 @@
    * 1.2 Setting up your testing environment
    * 1.3 Installing the HIVE environment
    * 1.4 Setting up HIVE
+* Part 2: A detailed look at the HIVE engine
 

@@ -1,5 +1,4 @@
-# HIVE
-A complete guide
+Hive: A complete guide
 
 1st edition.
 

@@ -113,6 +113,62 @@ This tells the program to break out of the current loop. In hive, you do somethi
     
 Unlike the generic **break;**, the derivattive in HIVIL allows you to specify the specific loop you would like to break from, allowing complex nesting appllications.
 
+#### 3.1.2.6 Starting a new job
+
+Despite the simplistic syntax, this can be the most frusturating part of programming for HIVE. Take a look at the following line in the sample program:
+
+    RUN compute
+    
+**RUN** actually has overrides that can be quite useful, but this is the easiest one to use. When this is called, the master node will find the file containing the job, and send it to a new slave node. The slave node will allocate resources and begin interpreting the file. Upon finishing, it will notify the master node, then procced to delete the file and free system resources back to the OS. It is worth noting that in most circumstances, it is usually best to only use the **RUN** call while in elevated slave mode.
+
+##### 3.1.2.6.1 Problems with parallel programming
+
+Programming multi-threaded or distributed programs can be difficult to debug. Here I'll cover some of these issues that you may come across in these sample programs.
+
+###### 3.1.2.6.1 Race conditions
+
+Take a look at the following C# program. Assume that any method that ends in **Async** runs on a separate thread. Also assume that editing objects across threads is allowed.
+
+    using System;
+    using System.IO;
+    using System.Threading;
+    
+    static void main()
+    {
+        int a = 5;
+        int b = 3;
+        int c = 20;
+        
+        SubtractAsync(a, b);
+        SubtractAsync(b, a);
+        Console.WriteLine(c);
+    }
+    
+    static void SubtractAsync(int x, int y)
+    {
+        c = x - y;
+    }
+
+Now what if I told you there are three possible outcomes to running this program? It's true! Let's go through the steps that lead to each one.
+
+***Console output: -2***
+
+To get this output, everything would execute in the intended order. First *c* would be set to 2 from the first call to *SubtractAsync()*. Then *c* would be set to -2. Finally the result would be displayed. In a perfect world, this is how the program is intended to run. But once we take into account the problems of asyncronous programming, what seems like math errors, turn into complex race conditions.
+
+***Console output: 2***
+
+Now go back to the first *SubtractAsync()* call. Let's say the first command ran just fine, and *c* is set to 2. Now let's say the second *SubtractAsync()* call is made, but it does not finish in time for the third statement to be run. In this case, *c* is equal to 2 at the time it is called, but it could be set to the intended answer of -2 long after we requested it. This is the first example of a race condition, where two processes are 'racing' to affect the outcome of a program.
+
+***Console output: 20***
+
+Now go back to the beginning and begin executing the program, but assume that **neither** thread returns a value before we print the value of *c* to the console. In this case, *c* would still be at its initialized value of 20. In fact, it could also be changed to either 2 **or** -2 after we already requested the value of *c*. As you can see, race conditions can be quite complex. Things like networking errors and task scheduling made by the operating system can completely change the outcome of a HIVE program.
+
+###### 3.1.2.6.2 Cross-thread variable manipulation
+
+Many programming languages do not allow editing variables or objects across threads. HIVE does. In order to try and reduce errors that occur from race conditions, HIVE uses a FIFO stack to read an write to the varstore. FIFO stands for First In First Out. This helps prevent problems that occur from reading from and writing to a variable at the saame time. Unfortunately, this means that this type of race condition is completely dependent on the stability of your network.
+
+From the example from 3.1.2.6.1, what if the variable *c* was a HIVEINT? This means that variable reading and writing is a network operation. A node missing its turn in a "round robin" style network switch could affect the outcome of the program.
+
 ## 3.2 C# API library
 
 

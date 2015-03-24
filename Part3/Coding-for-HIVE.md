@@ -58,6 +58,30 @@ If you have done any amount of programming before, you probably know what a comm
 ## 3.3 Programmers reference
 ### 3.3.1 HIVIL
 
+#### 3.3.1.1 Directives
 
+#### 3.3.1.2 Math
+
+*ADD [int a] [int b]*
+
+Adds two integers, and assigns the value to int b.
+
+*ADD [int a] [int b] [int c]*
+
+Adds integers a and b, then assigns the value to int c.
+
+*SET [var] [value]*
+
+Assigns the key [var] the value [value].
+
+*SUB [int a] [int b]*
+
+Subtracts [int b] from [int a], then assigns the value to [int b].
+
+*SUB [int a] [int b] [int c]*
+
+Subtracts [int b] from [int a], then assigns the value to [int c].
+
+#### 3.3.1.3 Task management
 
 ### 3.3.2 HIVE API

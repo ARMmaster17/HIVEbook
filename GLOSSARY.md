@@ -71,3 +71,7 @@ An attribute that is added to a key of some kind.
 ## Virtualization
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
+
+## Job
+
+A chunk of HIVE code that can be run independently from other chunks of code.

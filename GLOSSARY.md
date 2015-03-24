@@ -8,6 +8,10 @@ The place where your HIVE installation resides.
 
 A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
 
+## Directive
+
+A line of code prefaced with a # that tells the parser how to handle the file.
+
 ## Elevated Slave
 
 A node that acts like a slave, but is allowed to interface with the user using commands like PRINT.
@@ -67,7 +71,3 @@ An attribute that is added to a key of some kind.
 ## Virtualization
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
-
-## Directive
-
-A line of code prefaced with a # that tells the parser how to handle the file.

@@ -3,9 +3,11 @@ A complete guide
 
 1st edition.
 
+<br /><br /><br /><br />
+
 THIS BOOK IS INCOMPLETE. BY READING THIS BOOK ONLINE, YOU UNDERSTAND THAT SOME CONTENT MAY BE MISSING.
 
-This book is a full featured guide on how to set up, maintain, and program a HIVE base cluster. HIVE is an advanced framework designed specifically for parallel computing.
+This book is a full featured guide on how to set up, maintain, and program a HIVE base cluster. HIVE is an advanced framework designed specifically for parallel computing. Not only will this book walk you through how to use HIVE, but also contains a full reference to the HIVIL language and the HIVE engine.
 
 <br />
 <br />

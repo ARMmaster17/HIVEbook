@@ -165,9 +165,9 @@ Now go back to the beginning and begin executing the program, but assume that **
 
 ###### 3.1.2.6.2 Cross-thread variable manipulation
 
-Many programming languages do not allow editing variables or objects across threads. HIVE does. In order to try and reduce errors that occur from race conditions, HIVE uses a FIFO stack to read an write to the varstore. FIFO stands for First In First Out. This helps prevent problems that occur from reading from and writing to a variable at the saame time. Unfortunately, this means that this type of race condition is completely dependent on the stability of your network.
+Many programming languages do not allow editing variables or objects across threads. HIVE does (since jobs are just threads that run on another machine). In order to try and reduce errors that occur from race conditions, HIVE uses a FIFO stack to read an write to the varstore. FIFO stands for First In First Out. This helps prevent problems that occur from reading from and writing to a variable at the same time. Unfortunately, this means that this type of race condition is completely dependent on the stability of your network.
 
-From the example from 3.1.2.6.1, what if the variable *c* was a HIVEINT? This means that variable reading and writing is a network operation. A node missing its turn in a "round robin" style network switch could affect the outcome of the program.
+From the example in 3.1.2.6.1, what if the variable *c* was a HIVEINT? This means that variable reading and writing is a network operation. A node missing its turn in a "round robin" style network switch could affect the outcome of the program.
 
 ## 3.2 C# API library
 

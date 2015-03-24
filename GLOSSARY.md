@@ -8,6 +8,10 @@ The place where your HIVE installation resides.
 
 A line of code that is ignored by the parser/interpreter/processor/compiler. Usually used to identify what a specific line or section of code does. Used to help keep code clean and organized.
 
+## Elevated Slave
+
+A node that acts like a slave, but is allowed to interface with the user using commands like PRINT.
+
 ## Enterprise networking
 
 A specific type of network that is built to support hundreds or even thousands of users at one with minimum down-time. Often requires higher-end hardware than can be found on the consumer market.
@@ -64,6 +68,6 @@ An attribute that is added to a key of some kind.
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
 
-## Elevated Slave
+## Directive
 
-A node that acts like a slave, but is allowed to interface with the user using commands like PRINT.
+A line of code prefaced with a # that tells the parser how to handle the file.

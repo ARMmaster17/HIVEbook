@@ -32,6 +32,10 @@ The scripting language and interpreter that drives the HIVE engine
 
 Source code that is converted into machine code in real-time. HIVIL is an example of an interpreted language.
 
+## Job
+
+A chunk of HIVE code that can be run independently from other chunks of code.
+
 ## Key
 
 The name of a setting. Can also be the unique ID for each entry in a database.
@@ -72,6 +76,6 @@ An attribute that is added to a key of some kind.
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
 
-## Job
+## FIFO
 
-A chunk of HIVE code that can be run independently from other chunks of code.
+First In First Out stack. Used as a queue for one-at-a-time streams.

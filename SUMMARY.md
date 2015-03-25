@@ -12,4 +12,5 @@
    * 2.2 Cycle of a HIVE program
    * 2.3 Error catching
 * [Part 3: Coding for HIVE](Part3/Coding-for-HIVE.md)
+   * 3.1 Sample programs
 

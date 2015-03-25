@@ -207,6 +207,58 @@ If you were to run this program, the console window would close before you had a
 
 Now the program will prompt the user to press enter before continuing. This allows the user to see any output, or to wait for when the user is ready to continue (reconnect a network interface, remove a hard disk, etc...).
 
+The last command is *HALT*. This tells the interpreter to stop running the program. It will broadcast a 'soft killswitch' to all nodes on the network. This is like the aforementioned killswitch call, but it allows the program to come to a safe stop, which is less resources-intensive than a hard killswitch call. Then the temporary files are deleted and the server resources are freed for other programs on the server.
+
+#### 3.1.2.8 Math
+
+We aren't done yet, there's still a few lines of code left. Take a look at the *compute* job.
+
+    // Job for slave node
+    JOB compute
+        INT one
+        SET one 1
+        ADD adder one adder
+    ENDJOB
+    
+When the parser compiles your program, this job will be placed in a separate file called compute.hv. Upon calling this job, a copy of the job file will be transfered over the network and the slave node will begin execution.
+
+##### 3.1.2.8.1 Native variable types
+
+In addition to HIVEVARS, HIVE also supports many c-style data structures. A full list of supported types is in the programmers reference section. Take a look at the following line:
+
+    INT one
+    
+This is no different than either the following C# initialization statements.
+
+    int one = new int(0);
+    int one;
+    
+This line creates a variable with the specified name, then assigns it the default value for that type (again, covered in reference section).
+
+##### 3.1.2.8.2 Variable manipulation
+
+Once you create a variable, most likely you will want to set it to a value other than its default. This is where you use the *SET* command. Take a look at the following line:
+
+    SET one 1
+    
+This gives the key *one* a value of '1'. This is similar to either statement in the following C# code:
+
+    one = 1;
+    one = new int(1);
+
+##### 3.1.2.8.3 Math functions
+
+Now take a look at the last line:
+
+    ADD adder one adder
+    
+Recall from earlier the HIVEINT *adder* from the *main* job. This function will add the values of *adder* and *one*, then assign the value to *adder*. Note that HIVE does not support actual values. The following is not valid HIVE syntax:
+
+    // Invalid HIVE syntax
+    ADD adder 1 adder
+    
+HIVE also support functions other than adding. There are also overloads for the *ADD* call. See the reference section for more information.
+
 ## 3.2 C# API library
 
 

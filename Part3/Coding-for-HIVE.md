@@ -2,7 +2,7 @@
 This part is broken up into three sections. The first section will walk you through the sample programs. The second section will show you how to use the C# library in your existing applications. The final section will give a full reference to the HIVIL language and the HIVE API.
 ## 3.1 Sample program
 
-If you chose to comile HIVE from source, you may have noticed a folder called *./samples*. This folder contains sample programs for you to examine.
+If you chose to compile HIVE from source, you may have noticed a folder called *./samples*. This folder contains sample programs for you to examine.
 
 *If you didn't compile from source, I have included a slimmed-down version of each program*
 
@@ -169,6 +169,44 @@ Many programming languages do not allow editing variables or objects across thre
 
 From the example in 3.1.2.6.1, what if the variable *c* was a HIVEINT? This means that variable reading and writing is a network operation. A node missing its turn in a "round robin" style network switch could affect the outcome of the program.
 
+#### 3.1.2.7 Closing the program
+
+At the end of the *main* job, we see the following lines:
+
+    ...
+    PAUSE
+    HALT
+    
+Although this code is unreachable due to the loop, we still add it for demonstration purposes.
+
+The *PAUSE* function allows the job to temporarily pause execution and give the user a chance to see the program output. Consider the following C# program.
+
+    using System;
+    using System.IO;
+    
+    static int Main()
+    {
+        Console.WriteLine("Hello world!");
+        return 0;
+    }
+
+If you were to run this program, the console window would close before you had a chance to read the output. Now consider this new program:
+
+    using System;
+    using System.IO;
+    
+    static int Main()
+    {
+        Console.WriteLine("Hello world!");
+        //////////////////////////////////
+        Console.WriteLine("Press enter to continue...");
+        Console.ReadLine();
+        //////////////////////////////////
+        return 0;
+    }
+
+Now the program will prompt the user to press enter before continuing. This allows the user to see any output, or to wait for when the user is ready to continue (reconnect a network interface, remove a hard disk, etc...).
+
 ## 3.2 C# API library
 
 
@@ -178,52 +216,52 @@ From the example in 3.1.2.6.1, what if the variable *c* was a HIVEINT? This mean
 
 #### 3.3.1.1 Directives
 
-**#START:[string(jobname)]**
-
+##### #START:[string(jobname)]
 Tells the interpreter which job to run in elevated slave mode.
 
-**#NAME:[string]**
-
+##### #NAME:[string]
 The name of the program. Used for killswitch broadcasts.
 
-**#DESC:[string]**
-
+##### #DESC:[string]
 Description of the program. Not required.
 
-**#HIVE:[version]**
-
+##### #HIVE:[version]
 Minimum version of HIVE required to run program.
 
 #### 3.3.1.2 Math
 
-**ADD [int a] [int b]**
-
+##### ADD [int a] [int b]
 Adds two integers, and assigns the value to int b.
 
-**ADD [int a] [int b] [int c]**
-
+##### ADD [int a] [int b] [int c]
 Adds integers a and b, then assigns the value to int c.
 
-**SET [var] [value]**
-
+##### SET [var] [value]
 Assigns the key [var] the value [value].
 
-**SUB [int a] [int b]**
-
+##### SUB [int a] [int b]
 Subtracts [int b] from [int a], then assigns the value to [int b].
 
-**SUB [int a] [int b] [int c]**
-
+##### SUB [int a] [int b] [int c]
 Subtracts [int b] from [int a], then assigns the value to [int c].
 
 #### 3.3.1.3 Task management
 
-**RUN [string(jobname)]**
-
+##### RUN [string(jobname)]
 Runs the specified job on a new slave node.
 
-**RUN [string(jobname)] [int a]**
-
+##### RUN [string(jobname)] [int a]
 Runs the specifed job on a new slave node and assigns the process UID to [int a]
+
+#### 3.3.1.3 Variable declarations
+
+##### HIVEINT [string(variablename)]
+HIVE extension of the c-sytle *int* type.
+
+##### HIVEBOOL [string(variablename)]
+HIVE extension of the c-sytle *bool* type.
+
+##### HIVESTRING [string(variablename)]
+HIVE extension of the c-sytle *char[]* type.
 
 ### 3.3.2 HIVE API

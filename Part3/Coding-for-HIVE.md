@@ -283,6 +283,8 @@ Now that you understand the basics, let's take a look at a slightly more advance
     
 This program has some new IO commands, and the *AWAIT* operator. First let's take a look at the IO commands.
 
+#### 3.1.3.1 IO operations
+
 Consider the following PHP program:
 
     <?php
@@ -294,6 +296,25 @@ Consider the following PHP program:
 I'll explain why I chose PHP instead of C# in a minute. First take a look at the job *files* and the PHP code. These two functions do the exact same thing. *FILE_CREATE* does the same thing as *fopen()* in PHP. It will create a new file with the specified name. The only difference is that the permissions argument is not required in HIVE.
 
 *fwrite()* and *FILE_WRITE* do the same thing. However, in PHP you must have a file handle to use. This file handle points the command to an IO stream. HIVE automatically opens and closes the stream for each command to free system resources. That is also why there is no HIVE implementation of *fclose()*.
+
+It is important to note that all IO operations take place on the ***master node***. This is to avoid problems with files being spread across an entire cluster. A way to write locally to the slave node will be covered later.
+
+#### 3.1.3.2 AWAIT and process IDs
+
+Take a look at the following lines in the HIVE sample program:
+
+    RUN files processID
+    AWAIT processID
+    
+Recall the sample program from 3.1.2:
+
+    RUN compute
+    
+Many HIVE calls have overrides. This is one such example. Not only are we giving the name of the job to start, but also a pointer to an int. RUN will give the supplied variable the process ID of the job. This allows us to track the job as it executes. Once we execute the *RUN* command, now we can use the process ID in the next line:
+
+    AWAIT processID
+    
+If you have ever done multi-threaded programming, you may recognize the *await* operator. This operator temporarily halts program execution and waits for the specified job to either finish or crash. Then it continues execution. This is important as we want don't want to inturrupt an IO operation.
 
 ## 3.2 C# API library
 

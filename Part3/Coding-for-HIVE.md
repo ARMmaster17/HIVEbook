@@ -297,7 +297,7 @@ I'll explain why I chose PHP instead of C# in a minute. First take a look at the
 
 *fwrite()* and *FILE_WRITE* do the same thing. However, in PHP you must have a file handle to use. This file handle points the command to an IO stream. HIVE automatically opens and closes the stream for each command to free system resources. That is also why there is no HIVE implementation of *fclose()*.
 
-It is important to note that all IO operations take place on the ***master node***. This is to avoid problems with files being spread across an entire cluster. A way to write locally to the slave node will be covered later.
+It is important to note that all IO operations take place on the ***master node***. This is to avoid problems with files being spread across an entire cluster. Writing the files to the slave node is not currently supported.
 
 #### 3.1.3.2 AWAIT and process IDs
 

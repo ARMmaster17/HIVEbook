@@ -128,3 +128,5 @@ If you didn't see your node come up, you may have a firewall or a network issue.
 ## 1.6 Running your first program
 
 Now that you have at least one slave node on your network, you are ready to run your first program. Take a look at your application root. If you have a folder called *./samples*, you may proceed. Otherwise you will need to copy *sample.hive* from part 3 of this book.
+
+Once that is complete, go to the console window and type in **run C:\APPLICATION ROOT\samples\sample.hv** and press enter. This will run the sample program. You should see a continously incrementing number being printed to the console. If you type in **hive net** again, you should see that the load for the node has increased to a 1. Do not worry if the load is higher than 1, this just means that your node is slower than your master node. More information about how the sample program works can be found at the beginning of part 3.

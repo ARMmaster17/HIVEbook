@@ -259,6 +259,42 @@ Recall from earlier the HIVEINT *adder* from the *main* job. This function will 
     
 HIVE also support functions other than adding. There are also overloads for the *ADD* call. See the reference section for more information.
 
+### 3.1.3 sample2.hive
+
+Now that you understand the basics, let's take a look at a slightly more advanced program. This one will take advantage of HIVEs IO library. Take a look at the following program:
+
+    #HIVE:1.0
+    #NAME:sample2
+    #DESC:Writes 'hello world' to a file
+    #START:main
+    
+    JOB main
+        INT processID
+        RUN files processID
+        AWAIT processID
+        PAUSE
+        HALT
+    ENDJOB
+    
+    JOB files
+        FILE_CREATE test.txt
+        FILE_WRITE test.txt "Hello world!"
+    ENDJOB
+    
+This program has some new IO commands, and the *AWAIT* operator. First let's take a look at the IO commands.
+
+Consider the following PHP program:
+
+    <?php
+        $fh = fopen('test.txt' 'w');
+        fwrite($fh, 'Hello world!');
+        fclose($fh);
+    ?>
+
+I'll explain why I chose PHP instead of C# in a minute. First take a look at the job *files* and the PHP code. These two functions do the exact same thing. *FILE_CREATE* does the same thing as *fopen()* in PHP. It will create a new file with the specified name. The only difference is that the permissions argument is not required in HIVE.
+
+*fwrite()* and *FILE_WRITE* do the same thing. However, in PHP you must have a file handle to use. This file handle points the command to an IO stream. HIVE automatically opens and closes the stream for each command to free system resources. That is also why there is no HIVE implementation of *fclose()*.
+
 ## 3.2 C# API library
 
 

@@ -14,4 +14,5 @@
 * [Part 3: Coding for HIVE](Part3/Coding-for-HIVE.md)
    * 3.1 Sample programs
    * 3.2 C# API library
+   * 3.3 Programmers reference
 

@@ -20,6 +20,10 @@ A node that acts like a slave, but is allowed to interface with the user using c
 
 A specific type of network that is built to support hundreds or even thousands of users at one with minimum down-time. Often requires higher-end hardware than can be found on the consumer market.
 
+## FIFO
+
+First In First Out stack. Used as a queue for one-at-a-time streams.
+
 ## HIVE
 
 The engine that manages node connections and load distribution
@@ -76,6 +80,6 @@ An attribute that is added to a key of some kind.
 
 A software-based or hardware-based method of allowing multiple instances of an operating system to share the same physical computing resources.
 
-## FIFO
+## Parser
 
-First In First Out stack. Used as a queue for one-at-a-time streams.
+Program that prepares your application for execution by removing whitespace and converting it to an intermediate language.

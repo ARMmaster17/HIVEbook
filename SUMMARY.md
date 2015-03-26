@@ -18,4 +18,5 @@
 * [Installing the HIVE enviroment](ch3.md)
 * [Setting up HIVE](ch4.md)
 * [First run](ch5.md)
+* Part 2
 

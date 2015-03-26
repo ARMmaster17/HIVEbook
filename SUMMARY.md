@@ -17,5 +17,5 @@
    * 3.3 Programmers reference
        * 3.3.1 HIVIL
        * 3.3.2 C# API
-* What is HIVE?
+* [What is HIVE?](ch1.md)
 

@@ -19,4 +19,5 @@
        * 3.3.2 C# API
 * [What is HIVE?](ch1.md)
 * [Setting up your testing enviroment](ch2.md)
+* Installing the HIVE enviroment
 

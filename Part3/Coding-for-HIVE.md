@@ -6,6 +6,54 @@ If you chose to compile HIVE from source, you may have noticed a folder called *
 
 *If you didn't compile from source, I have included a slimmed-down version of each program*
 
+### 3.1.1 Compiling programs
+
+When you write a HIVE program, you write it into a .hive file. This is done through any text editor from Notepad to Visual Studio. However, you cannot run the .hive file, you have to parse it first.
+
+Each HIVE program will need it's own directory. Create a directory that looks like this:
+
+    testapp
+        testapp.hive
+
+Now open *testapp.hive* using any text editor of your choice. Paste the following code into it:
+
+    #HIVE:1.0
+    #NAME:testapp
+    #START:main
+    
+    JOB main
+    RUN test1
+    PAUSE
+    HALT
+    ENDJOB
+    JOB test1
+    REPEAT
+    ENDREPEAT
+    ENDJOB
+
+Don't worry if the code looks a little strange, we'll cover that later. Basically, this program will start a new job which will infinitely loop, then quit. This is all we need to show how the parser works.
+
+Now open up HIVE if it isn't already open, and type the following in:
+
+    pc PATH_TO_PROGRAM.hive
+
+Now give it a minute to parse the file. This could take a very long time if you have a slow computer or a large program. Once you get back to the prompt, open up the folder containing your HIVE program. You should now see something like this:
+
+    testapp
+        testapp.hive
+        varstore.v
+        main.hv
+        test1.hv
+        data.v
+
+Now let's figure out what exactly we are looking at. It is worth noting that it is usually a very bad idea to edit parsed files. It is much safer to edit the .hive file and recompile.
+
+The first file is the .hive file you created earlier, no suprises there. The next file is *varstore.v*. This is a collection of all the HIVEVARS that will be used in the program. This helps speed up the reading and writing to the varstore.
+
+The next two files both end in .hv. When the parser goes through the HIVE program, it splits each job into its own file. This allows the master node to simply send a file to slave nodes, which is much faster than trying to find its location in a file.
+
+The last file is *data.v*. This file stores data about how HIVE should handle your program. It also contains information from the directives at the top of your progrm (anything that starts with *#*).
+
 ### 3.1.2 *sample.hive*
 Within the samples folder, you should see a file called *sample.hive*. Go ahead an open it using your favorite text editor. You should see something like this:
 

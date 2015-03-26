@@ -12,7 +12,7 @@
    * 3.3 Programmers reference
        * 3.3.1 HIVIL
        * 3.3.2 C# API
-* Part 1
+* [Part 1](pt1.md)
 * [What is HIVE?](ch1.md)
 * [Setting up your testing enviroment](ch2.md)
 * [Installing the HIVE enviroment](ch3.md)

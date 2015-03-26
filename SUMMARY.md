@@ -20,5 +20,5 @@
 * [What is HIVE?](ch1.md)
 * [Setting up your testing enviroment](ch2.md)
 * [Installing the HIVE enviroment](ch3.md)
-* Setting up HIVE
+* [Setting up HIVE](ch4.md)
 

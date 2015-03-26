@@ -54,6 +54,8 @@ The next two files both end in .hv. When the parser goes through the HIVE progra
 
 The last file is *data.v*. This file stores data about how HIVE should handle your program. It also contains information from the directives at the top of your progrm (anything that starts with *#*).
 
+It is important to know that compiled programs **only** work with the version they were compiled with. For example, if you compiled a program with HIVE version 1.3.2, then you can only run the program with HIVE version 1.3.2. To make your programs work with a newer version of HIVE, simply re-parse them with the new compiler.
+
 ### 3.1.2 *sample.hive*
 Within the samples folder, you should see a file called *sample.hive*. Go ahead an open it using your favorite text editor. You should see something like this:
 

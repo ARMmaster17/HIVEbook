@@ -21,4 +21,5 @@
 * [Setting up your testing enviroment](ch2.md)
 * [Installing the HIVE enviroment](ch3.md)
 * [Setting up HIVE](ch4.md)
+* First run
 

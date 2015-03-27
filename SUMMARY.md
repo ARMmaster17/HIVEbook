@@ -22,6 +22,6 @@
 * [Sample programs](ch9.md)
 * [C# API library](ch10.md)
 * [Programmers Reference](ch11.md)
-   * HIVIL
+   * [HIVIL](ch11-1.md)
    * C# API
 

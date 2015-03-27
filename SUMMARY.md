@@ -12,10 +12,10 @@
 * [Introduction to the HIVE engine](ch6.md)
 * [Cycle of a HIVE program](ch7.md)
 * [Error catching](ch8.md)
+* [Part 3](pt3.md)
 * [Sample programs](ch9.md)
 * [C# API library](ch10.md)
 * [Programmers Reference](ch11.md)
    * [HIVIL](ch11-1.md)
    * [C# API](ch11-2.md)
-* [Part 3](pt3.md)
 

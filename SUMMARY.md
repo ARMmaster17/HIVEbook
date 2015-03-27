@@ -19,5 +19,5 @@
 * [Setting up HIVE](ch4.md)
 * [First run](ch5.md)
 * [Part 2](pt2.md)
-* Introduction to the HIVE engine
+* [Introduction to the HIVE engine](ch6.md)
 

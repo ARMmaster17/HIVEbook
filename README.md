@@ -14,4 +14,4 @@ This book is a full featured guide on how to set up, maintain, and program a HIV
 <hr />
 Copyright 2015 Joshua Zenn.
 
-All content herein is property of the author, and is not to be copied, electronically or otherwise, without written permission by the author. Copying of content by a teacher exclusively for an educational course is permitted.
+All content herein is property of the author, and is not to be copied, electronically or otherwise, without written permission by the author. Copying of portions of this book by a teacher exclusively for an educational course is permitted.

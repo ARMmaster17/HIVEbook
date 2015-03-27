@@ -2,12 +2,6 @@
 
 * [introduction](README.md)
    * [How to use this book](how_to_use_this_book.md)
-* [Part 3: Coding for HIVE](Part3/Coding-for-HIVE.md)
-   * 3.1 Sample programs
-   * 3.2 C# API library
-   * 3.3 Programmers reference
-       * 3.3.1 HIVIL
-       * 3.3.2 C# API
 * [Part 1](pt1.md)
 * [What is HIVE?](ch1.md)
 * [Setting up your testing enviroment](ch2.md)

@@ -21,4 +21,5 @@
 * [Part 3](pt3.md)
 * [Sample programs](ch9.md)
 * [C# API library](ch10.md)
+* Programmers Reference
 

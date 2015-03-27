@@ -20,4 +20,5 @@
 * [Error catching](ch8.md)
 * [Part 3](pt3.md)
 * [Sample programs](ch9.md)
+* C# API library
 

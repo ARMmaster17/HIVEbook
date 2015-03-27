@@ -23,5 +23,5 @@
 * [C# API library](ch10.md)
 * [Programmers Reference](ch11.md)
    * [HIVIL](ch11-1.md)
-   * C# API
+   * [C# API](ch11-2.md)
 

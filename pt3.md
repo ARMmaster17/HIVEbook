@@ -1,2 +1,2 @@
-# Part 3
-
+# Part 3: Coding for HIVE
+This part is broken up into three sections. The first section will walk you through the sample programs. The second section will show you how to use the C# library in your existing applications. The final section will give a full reference to the HIVIL language and the HIVE API.

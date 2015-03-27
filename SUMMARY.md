@@ -18,4 +18,5 @@
 * [Introduction to the HIVE engine](ch6.md)
 * [Cycle of a HIVE program](ch7.md)
 * [Error catching](ch8.md)
+* Part 3
 
